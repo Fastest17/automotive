@@ -1,0 +1,61 @@
+/* ------------------------------------------- */
+/* VARIABLES */
+/* ------------------------------------------- */
+
+/**
+*   Fonts
+*/
+
+// $f-helvetica: "Helvetica", sans-serif;
+
+/**
+*   COLORS
+*/
+
+$c-white: #fff;
+$c-grey: #f6f8f9;
+$c-white-gr: #E4EDE8;
+$c-smoke: #e4eced;
+$c-yellow: #eee2c6;
+$с-beige: #F5E3CF;
+$c-grey-d: #7B7B7B;
+$c-grey-border: #727C8E;
+$c-asphalt: #2e2b31;
+$c-black: #000;
+$c-blue: #6eb3ce;
+$c-blue-d: #0AAAE3;
+$c-green: #6ab493;
+$c-orange: #e59234;
+$c-magenta: #a96393;
+$c-magenta-d: #A14282;
+$c-magenta-m: #964A89;
+$c-title-color: #515C6F;
+$c-card-logo-red: #FF4D4D;
+$c-card-logo-yellow:#FF9F21;
+$c-magenta-l: #DCD0E4;
+$c-shadow: #E7EAF0;
+$c-time-color: #A6ADB4;
+$c-grey-l: #848484;
+$c-wiolet: #7a468e;
+$c-table-td-color: #707070;
+$c-title-funnel: #223645;
+$c-line-funnel: #666ba7;
+
+/**
+*   MEDIA
+*/
+
+$grid-breakpoints: (xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1500px);
+
+$container-max-widths: (sm: 768px,
+	md: 992px,
+	lg: 993px,
+	xl: 1170px,
+	xxl: 1405px);
+
+$grid-gutter-width: 30px;

@@ -1,0 +1,386 @@
+.hm-header {
+    padding: 75px 85px;
+    align-items: center;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+
+    &__logo-text,
+    &__search-wrp,
+    &__user-wrp,
+    &__basket-wrp,
+    &__support-wrp {
+        margin-right: 30px;
+    }
+
+    &__logo-img {
+        display: none;
+    }
+
+    &__logo-text h1,
+    &__phone a {
+        color: $c-grey;
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__search-wrp {
+        position: relative;
+        margin-left: auto;
+    }
+
+    &__search-wrp input {
+        color: $c-grey-d;
+        font-size: 21px;
+        line-height: 30px;
+        height: 50px;
+        width: 470px;
+        border: 0;
+        padding: 0 15px 0 50px;
+        background-color: $c-white-gr;
+    }
+
+    &__search-wrp button {
+        position: absolute;
+        color: $c-grey-d;
+        font-size: 21px;
+        line-height: 50px;
+        background: transparent;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    &__user-wrp {
+        align-items: center;
+    }
+
+    &__user-wrp p {
+        margin: auto 30px auto 0;
+    }
+
+    &__user-wrp p,
+    &__user-wrp span {
+        font-family: 'AcuminPro';
+        color: $c-grey;
+        font-size: 20px;
+        line-height: 34px;
+        text-transform: capitalize;
+        text-align: right;
+    }
+
+    &__user-img,
+    &__basket-wrp,
+    &__support-wrp {
+        position: relative;
+        min-width: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        max-height: 50px;
+        background: $c-smoke;
+    }
+
+    .cart-num {
+        position: absolute;
+        bottom: -17px;
+        left: -9px;
+        width: 32px;
+        height: 30px;
+        display: none;
+        background-color: $c-magenta-d;
+        font-size: 15px;
+        font-weight: bold;
+        color: $c-white;
+        text-align: center;
+        line-height: 30px;
+
+        @include small-size-max {
+            left: -2px;
+            bottom: -7px;
+            width: 17px;
+            height: 15px;
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+
+    .cart-num.active {
+        display: block;
+    }
+
+    &__user-img img,
+    &__basket-wrp a,
+    &__support-wrp a {
+        width: 48px;
+        height: 48px;
+    }
+
+    &__basket-wrp a {
+        background: $c-blue;
+
+        &:hover {
+            box-shadow: 0px 10px 25px rgba($c-black, .16);
+        }
+    }
+
+    &__support-wrp a {
+        background: $c-orange;
+
+        &:hover {
+            box-shadow: 0px 10px 25px rgba($c-black, .16);
+        }
+    }
+
+    &__basket-wrp img,
+    &__support-wrp img {
+        height: 25px;
+        width: auto;
+    }
+
+    .hm-mob-menu {
+        line-height: 26px;
+        height: 26px;
+
+        i {
+            font-size: 26px;
+            color: $c-magenta-d;
+        }
+    }
+
+    @media screen and (max-width:1869px) {
+        padding: 40px 80px;
+
+        &__logo-text,
+        &__search-wrp,
+        &__user-wrp,
+        &__basket-wrp,
+        &__support-wrp {
+            margin-right: 10px;
+        }
+
+        &__logo-text h1,
+        &__phone a {
+            font-size: 24px;
+        }
+
+        &__search-wrp input {
+            width: 300px;
+        }
+
+        &__user-wrp p,
+        &__user-wrp span {
+            line-height: 24px;
+        }
+
+        &__user-wrp p {
+            margin: auto 10px auto 0;
+        }
+    }
+
+    @include medium-size-min {
+        @include extra-large-size-max {
+            &__search-wrp input {
+                width: 50px;
+                padding-right: 0;
+            }
+
+            &__search-wrp {
+                margin-left: auto;
+            }
+        }
+
+        @include large-size-max {
+            padding: 40px;
+
+            &__logo-text h1,
+            &__phone a {
+                font-size: 20px;
+            }
+
+            &__user-wrp p,
+            &__user-wrp span {
+                font-size: 18px;
+            }
+        }
+
+        @include medium-size-max {
+
+            &__logo-text,
+            &__search-wrp,
+            &__user-wrp,
+            &__basket-wrp,
+            &__support-wrp {
+                margin-right: 7px;
+            }
+
+            &__user-wrp p {
+                display: none;
+            }
+
+            &__phone a {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @include small-size-max {
+        // position: relative;
+        height: 100px;
+        padding: 25px;
+        box-shadow: none;
+        background: transparent;
+
+        position: fixed;
+        background-color: $c-grey;
+
+        &__logo-img {
+            display: flex;
+            height: 100%;
+            width: 62px;
+            position: relative;
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        // &__logo-img::after {
+        //     position: absolute;
+        //     width: 100%;
+        //     color: $c-asphalt;
+        //     content: "honestmed.com";
+        //     font-size: 6px;
+        //     text-transform: uppercase;
+        //     text-align: center;
+        //     bottom: -13px;
+        // }
+
+        &__search-wrp {
+            margin-left: auto;
+        }
+
+        &__search-wrp input {
+            font-size: 15px;
+            line-height: 18px;
+            height: 28px;
+            width: 145px;
+            padding: 0 6px 0 30px;
+        }
+
+        &__search-wrp button {
+            font-size: 14px;
+            line-height: 28px;
+            width: 30px;
+        }
+
+        &__logo-text,
+        &__user-wrp p,
+        &__phone {
+            display: none;
+        }
+
+        &__search-wrp,
+        &__user-wrp,
+        &__basket-wrp {
+            margin-right: 5px;
+        }
+
+        &__support-wrp {
+            margin-right: 0;
+        }
+
+        &__user-img,
+        &__basket-wrp,
+        &__support-wrp {
+            min-width: 28px;
+            min-height: 28px;
+        }
+
+        &__user-img img,
+        &__basket-wrp a,
+        &__support-wrp a {
+            width: 26px;
+            height: 26px;
+        }
+
+        &__basket-wrp img,
+        &__support-wrp img {
+            height: 13px;
+            width: auto;
+        }
+
+        // .cart-pop-up {
+        //     display: none;
+        // }
+
+        // .cart-link {
+        //     display: flex;
+        // }
+    }
+
+    @media screen and (max-width:479px) {
+        &__logo-img {
+            margin-right: 15px;
+        }
+    }
+
+    @media screen and (max-width:374px) {
+        &__logo-img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        &__logo-img::after {
+            font-size: 6px;
+            bottom: -10px;
+        }
+
+        &__search-wrp input {
+            width: 110px;
+        }
+    }
+}
+
+.js-searchClick {
+    display: none;
+
+    @include medium-size-min {
+        @include extra-large-size-max {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.hm-header__show-search {
+    .hm-header {
+        &__search-wrp {
+            margin-left: 20px;
+            margin-right: 0;
+            width: 100%;
+        }
+
+        &__search-wrp input {
+            width: 100%;
+        }
+
+        &__user-wrp,
+        &__basket-wrp,
+        &__support-wrp,
+        &__phone {
+            display: none;
+        }
+    }
+
+    .js-searchClick {
+        display: none;
+    }
+}

@@ -1,0 +1,229 @@
+.hm-footer {
+    width: 100%;
+    padding: 40px 80px;
+    background-color: $c-asphalt;
+    position: absolute;
+    bottom: 0;
+
+    // desktop
+    &__mobile {
+        display: none;
+    }
+
+    &__links li {
+        margin-right: 70px;
+    }
+
+
+    &__links a {
+        font-family: 'AcuminPro';
+        color: $c-smoke;
+        font-size: 20px;
+        line-height: 28px;
+        position: relative;
+        text-transform: capitalize;
+
+        &::after {
+            bottom: -2px;
+            right: 0;
+            transform-origin: left;
+            background-image: linear-gradient(to left, $c-yellow 0%, $c-blue 100%);
+        }
+
+        &::before {
+            top: -4px;
+            left: 0;
+            transform-origin: right;
+            background-image: linear-gradient(to right, $c-yellow 0%, $c-blue 100%);
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 250ms ease;
+        }
+
+        &:hover::after,
+        &:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    }
+
+    &__subscribe input {
+        font-family: 'AcuminPro';
+        color: $c-blue;
+        font-size: 19px;
+        line-height: 22px;
+        padding: 15px 20px;
+        background: $c-grey;
+        border-radius: 10px;
+        border: 0;
+        max-height: 50px;
+
+        &:hover {
+            color: $c-white;
+            background-image: linear-gradient(to right, $c-yellow 0%, $c-blue 100%);
+        }
+    }
+
+    &__support-btn {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        top: -55px;
+        right: 80px;
+        justify-content: center;
+        box-shadow: 0px 0px 75px rgba($c-black, .16);
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 75px rgba(0, 0, 0, .36);
+        }
+    }
+
+    &__support-btn img {
+        width: 100%;
+        max-width: 58px;
+    }
+
+    @media screen and (max-width:1730px) {
+        &__links li {
+            margin-right: 40px;
+        }
+
+        &__links a {
+            font-size: 16px;
+        }
+    }
+
+    @include extra-large-size-max {
+        &__links {
+            display: block;
+        }
+
+        &__subscribe {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        &__support-btn {
+            right: 40px;
+        }
+    }
+
+    @include large-size-max {
+        padding: 40px;
+
+        &__links li {
+            margin-right: 30px;
+        }
+
+        &__links a {
+            font-size: 15px;
+        }
+    }
+
+    @include medium-size-max {
+        &__links-wrp {
+            display: block;
+        }
+
+        &__links li {
+            margin-right: 60px;
+        }
+
+        &__links a {
+            font-size: 16px;
+        }
+    }
+
+    // mobile
+    &__mobile {
+        nav {
+            margin-top: -10px;
+            text-align: center;
+        }
+
+        ul {
+            justify-content: center;
+        }
+
+        li {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            color: $c-white;
+            font-size: 11px;
+            line-height: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 75px;
+            height: 75px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 8px 15px rgba($с-beige, .23);
+        }
+
+        li:nth-child(1) a {
+            background-image: linear-gradient(to top, $c-yellow 0%, $c-blue 100%);
+        }
+
+        li:nth-child(2) a {
+            background-image: linear-gradient(to top, $c-magenta-d 0%, $c-orange 100%);
+        }
+
+        li:nth-child(3) a {
+            background-image: linear-gradient(to top, $c-blue 0%, $c-magenta-d 100%);
+        }
+
+        li:nth-child(4) a {
+            background-image: linear-gradient(to top, $c-blue 0%, $c-green 100%);
+        }
+    }
+
+    @include small-size-max {
+        background: $c-white;
+        padding: 0 24px;
+        height: 76px;
+        z-index: 110;
+        position: fixed;
+        bottom: 0;
+        transition: .5s all ease;
+        display: none;
+
+        &__desktop {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:374px) {
+        height: 65px;
+
+        &__mobile a {
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+
+@include small-size-max {
+    .hm-footer.nav-down {
+        bottom: -86px;
+    }
+}

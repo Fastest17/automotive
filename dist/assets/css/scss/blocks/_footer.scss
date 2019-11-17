@@ -1,0 +1,86 @@
+.footer {
+    background: $bg-header;
+    border-top: 1px solid $c-black;
+    padding: 100px 0 5px;
+
+    &__logo {
+        max-width: 360px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__nav,
+    &__contacts {
+        p {
+            color: $c-white;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 3;
+        }
+
+        ul {
+            li {
+                a {
+                    color: $c-white;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 3;
+
+                    &:hover {
+                        color: $c-active;
+                    }
+                }
+            }
+        }
+    }
+
+    &__nav-menu {
+        a.active {
+            color: $c-active;
+        }
+    }
+
+    &__copyright {
+        padding-top: 40px;
+
+        p {
+            color: $c-white;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            &:hover {
+                color: $c-active;
+            }
+        }
+    }
+
+    @include medium-size-max {
+        padding-top: 50px;
+
+        &__logo {
+            margin-bottom: 50px;
+        }
+
+        &__nav,
+        &__contacts {
+            p {
+                text-align: center;
+            }
+
+            ul {
+                li {
+
+                    text-align: center;
+
+                }
+            }
+        }
+
+        &__contacts {
+            margin-top: 50px;
+        }
+    }
+}

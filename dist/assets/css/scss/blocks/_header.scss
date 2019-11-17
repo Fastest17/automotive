@@ -1,38 +1,69 @@
-header {
-    position: relative;
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba($bg-header, 0.3);
+    padding: 20px 0 25px;
+    width: 100%;
+    align-items: center;
 
-    .top-bar {
-        position: fixed;
-        background: rgba($bg-header, 0.3);
-        padding: 20px 0 25px;
-        width: 100%;
-        align-items: center;
+    &__logo {
+        width: 166px;
+        height: auto;
+    }
 
-        .icon-menu {
-            color: $c-white;
-            font-size: 30px;
-            font-weight: bold;
-            display: none;
-        }
+    .icon-menu {
+        color: $c-white;
+        font-size: 30px;
+        font-weight: bold;
+        display: none;
+    }
 
-        &__menu {
-            li {
-                margin-left: 34px;
+    &__menu {
+        li {
+            margin-left: 34px;
 
-                a {
-                    color: $c-white;
-                    font-weight: bold;
-                    font-size: 16px;
+            a {
+                font-family: $f-open-sans;
+                color: $c-white;
+                font-weight: bold;
+                font-size: 16px;
 
-                    &:hover {
-                        color: $c-active;
-                    }
-                }
-
-                a.active {
+                &:hover {
                     color: $c-active;
                 }
             }
+
+            a.active {
+                color: $c-active;
+            }
+        }
+    }
+
+    @include medium-size-max {
+        flex-direction: column;
+        width: 100%;
+
+        .icon-menu {
+            display: block;
+            cursor: pointer;
+        }
+
+        &__menu {
+            flex-direction: column;
+            margin-top: 30px;
+            display: none;
+
+            li {
+                margin-bottom: 15px;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    @include extra-small-size-max {
+        .icon-menu {
+            margin-right: 15px;
         }
     }
 }

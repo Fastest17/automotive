@@ -1,0 +1,14 @@
+<section class="home-banner">
+    <img class="js-bg" src="{{root}}{{h_banner.bgImg}}" alt="Banner">
+    <div class="container">
+        <div class="row">
+            <div class="home-banner__content">
+                <h1 class="home-banner__title">{{h_banner.title}}</h1>
+                <h3 class="home-banner__subtitle">{{h_banner.subtitle}}</h3>
+                {% if h_banner.desc %}
+                    <p class="home-banner__desc">{{h_banner.desc}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

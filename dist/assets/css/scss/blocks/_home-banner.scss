@@ -1,0 +1,62 @@
+
+.home-banner {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        padding: 45px 30px 40px;
+        margin-top: 230px;
+        background-color: rgba($bg-header, .25);
+        width: max-content;
+        max-width: 720px;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: $f-open-sans;
+        font-weight: bold;
+        color: $c-white;
+    }
+
+    &__subtitle {
+        font-size: 30px;
+        font-family: $f-open-sans;
+        color: $c-white;
+        font-weight: normal;
+        margin-top: 30px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        font-family: $f-open-sans;
+        color: $c-white;
+        font-weight: normal;
+        margin-top: 10px;         
+    }
+
+    @include small-size-max {
+        &__content {
+            margin-top: 100px;
+            max-width: 100%;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+    
+        &__subtitle {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    
+        &__desc {
+            font-size: 12px;
+            margin-top: 5px;         
+        }
+    }
+}
+
+  
+  

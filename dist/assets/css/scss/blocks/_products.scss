@@ -1,0 +1,106 @@
+.products {
+    &__item {
+        margin-bottom: 25px;
+        width: 100%;
+        border: 8px solid rgba($c-black, .0);
+        box-sizing: border-box;
+
+        &-img {
+            height: 175px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &-text {
+            padding: 40px 2px;
+            background-color: rgba($bg-header, .1);
+            text-align: center;
+            max-height: 130px;
+        }
+
+        &-title {
+            font-size: 14px;
+            font-family: $f-open-sans;
+            font-weight: bold;
+            color: $text-color;
+        }
+
+        &-price {
+            font-size: 16px;
+            line-height: 26px;
+            font-family: $f-open-sans;
+            font-weight: bold;
+            color: $text-color;
+        }
+
+        &-btn {
+            display: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 14px;
+            font-family: $f-open-sans;
+            font-weight: bold;
+            color: $c-active;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 10px 30px;
+            width: max-content;
+            margin: 0 auto;
+            border: 1px solid $c-active;
+            box-sizing: border-box;
+
+            &:hover {
+                background-color: $c-active;
+                color: $c-white;
+            }
+        }
+
+        &:hover {
+            border: 8px solid rgba($c-black, .1);
+            border-radius: 8px;
+            margin-top: -15px;
+            transition: all 250ms ease;
+
+            .products__item-price {
+                display: none;
+            }
+
+            .products__item-btn {
+                display: block;
+            }
+        }
+    }
+
+    &__item-wrap.hide {
+        display: none;
+    }
+
+    &__see-more {
+        margin-top: 50px;
+
+        &-btn {
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 14px;
+            font-family: $f-open-sans;
+            font-weight: bold;
+            color: $c-active;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 8px 15px;
+            width: max-content;
+            margin: 0 auto;
+            border: 1px solid $c-active;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $c-active;
+                color: $c-white;
+            }
+        }
+
+
+    }
+}

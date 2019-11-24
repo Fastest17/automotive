@@ -1,0 +1,34 @@
+{%- macro main() -%}
+    <div class="container">
+        {{ caller() }}
+    </div>
+{%- endmacro -%}
+
+{%- macro row() -%}
+    <div class="row">
+        {{ caller() }}
+    </div>
+{%- endmacro -%}
+
+{%- macro item(imgPath, title, price, classHide ) -%}
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 products__item-wrap {{classHide}}">
+        <div class="products__item">
+            <div class="products__item-img">
+                <img class="js-bg" src="{{imgPath}}" alt="">
+            </div>
+            <div class="products__item-text">
+                <h4 class="products__item-title">{{title}}</h4>
+                <h4 class="products__item-price">{{price}}</h4>
+                <a class="products__item-btn" href="#">Переглянути</a>
+            </div>
+        </div>
+    </div>
+{%- endmacro -%}
+
+{%- macro see_more() -%}
+    <div class="row justify-content-center">
+        <div class="products__see-more">
+            <button class="products__see-more-btn">Переглянути ще</button>
+        </div>
+    </div>
+{%- endmacro -%}

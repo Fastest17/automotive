@@ -3,6 +3,7 @@
         margin-bottom: 25px;
         width: 100%;
         border: 8px solid rgba($c-black, .0);
+        border-radius: 8px;
         box-sizing: border-box;
 
         &-img {
@@ -57,10 +58,9 @@
         }
 
         &:hover {
-            border: 8px solid rgba($c-black, .1);
-            border-radius: 8px;
+            border-color: rgba($c-black, .1);            
             margin-top: -15px;
-            transition: all 250ms ease;
+            transition: all 100ms ease;
 
             .products__item-price {
                 display: none;
@@ -100,7 +100,5 @@
                 color: $c-white;
             }
         }
-
-
     }
 }

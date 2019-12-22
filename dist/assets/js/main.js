@@ -84,7 +84,7 @@ $(document).ready(function () {
     /*             SEE MORE BUTTON                 */
     /* ------------------------------------------- */
     $('.products__see-more-btn').on('click', function() {
-        // $('.products__item-wrap').removeClass('hide');
         $('.products__item-wrap').slideDown();
+        $('.products__item-wrap').removeClass('hide');
     });
 });

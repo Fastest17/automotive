@@ -1,0 +1,19 @@
+<section class="contact-form">
+    <img class="js-bg" src="{{root}}{{form.bgImg}}" alt="Background">
+    <div class="container">
+        <div class="row">
+            <div class="contact-form__content">
+                <h2 class="contact-form__title">{{form.title}}</h2>
+                <p class="contact-form__text">{{form.text}}</p>
+            </div>
+
+            <form>
+                {% for i in form.input %}
+                    <input type="{{i.type}}" placeholder="{{i.placeholder}}">
+                {% endfor %}
+                <textarea placeholder="{{form.textarea_placeholder}}"></textarea>
+                <button type="submit">{{form.btn_text}}</button>
+            </form>
+        </div>
+    </div>
+</section>

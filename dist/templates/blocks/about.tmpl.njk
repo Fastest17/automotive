@@ -1,0 +1,28 @@
+<section class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-12">
+                {% if about.desc_1 %}
+                    <p>{{about.desc_1}}</p>
+                {% endif %}
+
+                {% if about.list %}
+                    <ul>
+                        {% for i in about.list %}
+                            <li>{{i.item}}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+                {% if about.desc_2 %}
+                    <p>{{about.desc_2}}</p>
+                {% endif %}
+            </div>
+            <div class="col-lg-5 col-12">
+                <div class="about__img">
+                    <img src="{{about.img_src}}" alt="Background">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

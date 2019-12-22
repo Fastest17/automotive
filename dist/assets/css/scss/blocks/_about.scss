@@ -1,0 +1,40 @@
+.about {
+    p,
+    ul {
+        font-size: 16px;
+        font-family: $f-open-sans;
+        color: $bg-header;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    ul {
+        li {
+            list-style: square;
+            margin-left: 26px;
+
+            &:first-child {
+                padding-top: 40px;
+            }
+
+            &:last-child {
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    &__img {
+        @include large-size-min {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: auto;
+                max-width: initial;
+            }
+        }
+    }
+}

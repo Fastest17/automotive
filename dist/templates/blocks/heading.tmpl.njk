@@ -1,0 +1,15 @@
+<section class="heading">
+    {% if heading.title %}
+        <div class="heading__title">
+            <h2>{{ heading.title }}</h2>
+        </div>
+    {% endif %}
+
+    {% if heading.desc %}
+        <div class="heading__desc">
+            {% for i in heading.desc %}
+                <p>{{ i.text }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>

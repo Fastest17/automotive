@@ -389,6 +389,7 @@ b, strong {
   margin-bottom: 25px;
   width: 100%;
   border: 8px solid rgba(0, 0, 0, 0);
+  border-radius: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -448,11 +449,10 @@ b, strong {
 }
 
 .products__item:hover {
-  border: 8px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.1);
   margin-top: -15px;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
 }
 
 .products__item:hover .products__item-price {
@@ -494,5 +494,95 @@ b, strong {
 .products__see-more-btn:hover {
   background-color: #ff6c00;
   color: #fff;
+}
+
+.heading__title {
+  margin: 100px 0 75px;
+}
+
+@media screen and (max-width: 991px) {
+  .heading__title {
+    margin: 50px 0;
+  }
+}
+
+.heading__desc {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 991px) {
+  .heading__desc {
+    margin-bottom: 50px;
+  }
+}
+
+.heading h2 {
+  font-size: 28px;
+  font-family: "Open Sans";
+  color: #4d5a6b;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.heading h2::after {
+  content: "";
+  height: 1px;
+  width: 165px;
+  background-color: #ff6c00;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+}
+
+.heading p {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: #4d5a6b;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.about p,
+.about ul {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: #4d5a6b;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.about ul li {
+  list-style: square;
+  margin-left: 26px;
+}
+
+.about ul li:first-child {
+  padding-top: 40px;
+}
+
+.about ul li:last-child {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .about__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  .about__img img {
+    height: 100%;
+    width: auto;
+    max-width: initial;
+  }
+}
+
+.contact-form {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 /*# sourceMappingURL=style.css.map */

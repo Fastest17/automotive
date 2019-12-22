@@ -16,37 +16,119 @@
   } %}
   {% include "blocks/home-banner.tmpl.njk" %}
 
+  {# Heading  #}
+  <div class="container">
+    {% set heading = {
+      title: 'Останні надходження'
+    } %}
+    {% include "blocks/heading.tmpl.njk" %}
+  </div>
+
   {# Products #}
   <section class="products">
     {% import "blocks/products.tmpl.njk" as product %}
     {%- call product.main() -%}
-      {%- call product.row() -%}      
-            {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €') -%}
-            {%- endcall -%}
-            {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €') -%}
-            {%- endcall -%}
-            {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €') -%}
-            {%- endcall -%}
-            {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €') -%}
-            {%- endcall -%}
-            
-            {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €', classHide = 'hide') -%}
-            {%- endcall -%}
-            {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €', classHide = 'hide') -%}
-            {%- endcall -%}
-            {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €', classHide = 'hide') -%}
-            {%- endcall -%}
-            {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €', classHide = 'hide') -%}
-            {%- endcall -%}
-            
-      {%- endcall -%}
-      
-      {%- call product.see_more() -%}{%- endcall -%}
-      
-    {%- endcall -%}    
+    {%- call product.row() -%}
+    {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €') -%}
+    {%- endcall -%}
+
+    {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €', classHide = 'hide') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €', classHide = 'hide') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €', classHide = 'hide') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €', classHide = 'hide') -%}
+    {%- endcall -%}
+
+    {%- endcall -%}
+
+    {%- call product.see_more() -%}{%- endcall -%}
+
+    {%- endcall -%}
   </section>
+
+  {# Heading #}
+  <div class="container">
+    {% set heading = {
+      title: 'Про нас'
+    } %}
+    {% include "blocks/heading.tmpl.njk" %}
+  </div>
+  {# About Us #}
+  {% set about = {
+    desc_1: '«Автохаус Львів» пропонує широкий спектр послуг з приводу купівлі, оформлення та подальшого обслуговування вживаних автомобілів. Ексклюзивні моделі авто і чітко вказані рік та пробіг – це наша перевага задля Вашої довіри. Асортимент послуг компанії:',
+    list: [
+      {
+        item: "Продаж вживаних автомобілів відомих марок з Європи та північної Америки;"
+      }, {
+        item: "Викуп Ваших автомобілів;"
+      }, {
+        item: "Обмін на будь-яке авто нашого салону, що Вам до вподоби з умовою доплати з обох сторін;"
+      }, {
+        item: "Доступні кредитні пропозиції;"
+      }, {
+        item: "Автострахування;"
+      }, {
+        item: "Постановка і зняття автомобіля з обліку;"
+      }, {
+        item: "Допомога під час експлуатації придбаного автомобіля;"
+      }, {
+        item: "Встановлення додаткового обладнання;"      
+      }, {
+        item: "Професійне підготування автомобіля до продажу."
+      }
+      
+    ],
+    desc_2: 'Якщо придбаєте автомобіль у нашому салоні, Ви отримаєте прозору сервісну історію, підтверджений пробіг, безаварійний стан автомобіля, справедливу і привабливу ціну та абсолютну безпеку покупки.',
+    img_src: 'assets/images/about.jpg'
+  } %}
+  {% include "blocks/about.tmpl.njk" %}
+
+  {# Heading #}
+  <div class="container">
+    {% set heading = {
+      title: 'ЧИМ ЗАЙМАЄТЬСЯ «АВТОХАУС» УКРАЇНА?',
+      desc: [
+        {
+          text: 'Наша компанія з великим задоволенням робить життя людей комфортнішим, а купівлю автомобілів приємною та безпечною.'
+        }, {
+          text: 'Ми пропонуємо клієнтам широкий вибір сучасних автомобілів, а всі наші рішення базуються на інтересах покупців.
+          Ви досягнете успіху та динамічності,
+          відчуєте покращення якості життя та залишитесь задоволені своїм вибором !'
+
+        }
+      ]
+    } %}
+    {% include "blocks/heading.tmpl.njk" %}
+  </div>
+
+  {# Contact Form #}
+  {% set form = {
+    bgImg: 'assets/images/bgform.jpg',
+    title: 'НЕ ГАЙТЕ ЧАСУ НА САМОСТІЙНІ ПОШУКИ',
+    text: 'Залиште нам свої контакти і ми відразу розкажемо Вам все, що Вас цікавить',
+    input: [
+      {
+        type: 'text',
+        placeholder: "Ім'я"
+      },
+      {
+        type: 'text',
+        placeholder: "Номер телефону або пошта"
+      }
+    ],
+    textarea_placeholder: "Коментар",
+    btn_text: 'Надіслати'
+  } %}
+  {% include "blocks/contact-form.tmpl.njk" %}
 
   {# Footer #}
   {% include "blocks/footer.tmpl.njk" %}
-
 {% endblock %}

@@ -5,15 +5,15 @@
             <div class="contact-form__content">
                 <h2 class="contact-form__title">{{form.title}}</h2>
                 <p class="contact-form__text">{{form.text}}</p>
-            </div>
 
-            <form>
-                {% for i in form.input %}
-                    <input type="{{i.type}}" placeholder="{{i.placeholder}}">
-                {% endfor %}
-                <textarea placeholder="{{form.textarea_placeholder}}"></textarea>
-                <button type="submit">{{form.btn_text}}</button>
-            </form>
+                <form class="t-center">
+                    {% for i in form.input %}
+                        <input type="{{i.type}}" placeholder="{{i.placeholder}}">
+                    {% endfor %}
+                    <textarea placeholder="{{form.textarea_placeholder}}"></textarea>
+                    <button type="submit">{{form.btn_text}}</button>
+                </form>
+            </div>
         </div>
     </div>
 </section>

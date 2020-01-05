@@ -1,0 +1,32 @@
+.breadcrumbs {
+    padding: 40px 0;
+
+    &__link { 
+        font-size: 16px;
+        font-family: $f-open-sans;
+        color: $bg-header;
+        font-weight: bold;
+
+        &:hover {
+            color: $bg-header;
+        }
+
+        &::before {
+            content: "\f30b";
+            font-family: 'Font Awesome 5 Free';
+            color: $bg-header;
+            margin-right: 5px;
+        }
+
+        &:first-child {
+            &::before {
+                content: none;
+            }
+        }
+
+        &:last-child {
+            color: $c-active;
+        }
+    }
+}
+  

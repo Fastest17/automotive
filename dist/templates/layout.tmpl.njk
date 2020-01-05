@@ -4,31 +4,30 @@
         <meta charset="utf-8">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-        <meta name="format-detection" content="telephone=no">
-        <!-- Favicon Code -->
-        {# <link rel="icon" href="{{root}}assets/images/favicon-32x32.png?v=almAQKBO96" sizes="32x32"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="{{root}}assets/images/favicon-16x16.png?v=almAQKBO96">
-        <link rel="apple-touch-icon-precomposed" href="{{root}}assets/images/apple-touch-icon.png?v=almAQKBO96" sizes="180x180"/> #}
+        <meta name="format-detection" content="telephone=no">        
 
         <title>{{ pageTitle }}</title>
 
         <!-- FONTS -->
 
         <!-- STYLES -->
-        <link rel="stylesheet" id="font-awesome" href="{{root}}assets/css/font-awesome.min.css">
+        <link rel="stylesheet" id="font-awesome" href="{{root}}assets/css/fontawesome/css/all.min.css">
         <link rel="stylesheet" id="fonts-css" href="{{root}}assets/css/fonts.css" type="text/css" media="all">
         <link rel="stylesheet" id="bootstrap" href="{{root}}assets/css/bootstrap.min.css" type="text/css" media="all">
-        {# <link rel="stylesheet" id="normalize-css" href="{{root}}assets/css/normalize.css" type="text/css" media="all">
-        <link rel="stylesheet" id="swiper-css" href="{{root}}assets/css/swiper.min.css" type="text/css" media="all"> #}
         <link rel="stylesheet" id="header-css" href="{{root}}assets/css/style.css" type="text/css" media="all">
 
     </head>
     <body>
+        <!-- PRELOADER -->
+        <div id="preloader" class="preloader flex">
+            <div class="anim--fadeInOut">
+                <img src="{{root}}assets/images/logo.png" alt="honest Medical Logo">
+            </div>
+        </div>
 
         {% block content %}{% endblock %}
 
         <script type="text/javascript" src="{{root}}assets/js/libs/jquery.js"></script>
-        {# <script type='text/javascript' src='{{root}}assets/js/libs/swiper.min.js'></script> #}
         <script type='text/javascript' src='{{root}}assets/js/main.js'></script>
     </body>
 </html>

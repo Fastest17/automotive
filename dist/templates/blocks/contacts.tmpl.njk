@@ -1,0 +1,19 @@
+<section class="contacts flex">
+    {% for i in contacts.items %}
+        <div class="contacts__item">
+            <h3>{{i.title}}</h3>
+
+            {% if i.desc %}
+                <p>{{i.desc | safe}}</p>
+            {% endif %}
+
+            {% if i.links %}
+                {% for j in i.links %}
+                    <div class="flex">
+                        <a href="{{j.link_href}}">{{j.link_text}}</a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endfor %}
+</section>

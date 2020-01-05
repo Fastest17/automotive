@@ -1,0 +1,40 @@
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        padding: 45px 80px;
+        margin: 180px 0;
+        background-color: rgba($bg-header, .25);
+        width: max-content;
+
+        @include medium-size-max {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        @include small-size-max {
+            margin: 100px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: $f-open-sans;
+        font-weight: bold;
+        color: $c-white;
+        margin: 0;
+
+        @include small-size-max {
+            font-size: 30px;
+        }
+
+        @media (max-width: 350px) {
+            font-size: 28px;
+        }
+    }
+
+}

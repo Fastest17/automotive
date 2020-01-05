@@ -1,0 +1,31 @@
+.goals {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        padding: 30px 50px 40px;
+        margin: 140px 0;
+        background-color: rgba($bg-header, .25);
+        width: max-content;
+        max-width: 455px;
+
+        @include small-size-max {
+            margin: 100px 0;
+            max-width: 100%;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+        font-family: $f-open-sans;
+        color: $c-white;
+        font-weight: bold;
+        line-height: 2.25;
+        margin: 0;
+
+        @include small-size-max {
+            font-size: 12px;
+        }
+    }
+}

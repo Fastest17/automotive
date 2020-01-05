@@ -1,0 +1,30 @@
+.contacts {
+    h3,
+    p,
+    a {
+        font-size: 16px;
+        font-family: $f-open-sans;
+        font-weight: bold;        
+        color: $bg-header;
+    }
+
+    h3 {
+        line-height: 3.75;
+    }
+
+    a {
+        &:hover {
+            color: $c-active;
+        }
+    }
+
+    &__item {
+        margin: 0 30px;
+    }
+
+    @include medium-size-max {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+  

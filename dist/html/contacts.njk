@@ -7,7 +7,99 @@
   {# Header #}
   {% include "blocks/header.tmpl.njk" %}
 
-  
+  {# Banner #}
+  {% set banner = {
+    bgImg: 'assets/images/bg2.jpg',
+    title: 'КОНТАКТИ'
+  } %}
+  {% include "blocks/banner.tmpl.njk" %}
+
+  {# Bread Crumbs #}
+  {% set breadcrumbs = {
+    items: [
+      {
+        link_href: "index.html",
+        link_text: "Головна"
+      }, {
+        link_href: "contacts.html",
+        link_text: "Контакти"
+      }
+    ]
+  } %}
+  {% include "blocks/bread-crumbs.tmpl.njk" %}
+
+  {# Contacts #}
+  <div class="container">
+    <div class="row justify-content-center">
+      {% set contacts = {
+        items: [
+          {
+            title: "Телефон",
+            links: [
+              {
+                link_text: "+38 (096) 090 77 00",
+                link_href: "tel:(096)0907700"
+              }
+            ]
+          }, {
+            title: "Адреса",
+            desc: "Львівська область<br>
+ с.Сокільники<br> вул.Скнилівська 23 "
+
+          }, {
+            title: "Email",
+            links: [
+              {
+                link_text: "office@autohouse.lviv.ua",
+                link_href: "mailto:office@autohouse.lviv.ua"
+              }
+            ]
+          }, {
+            title: "Соціальні мережі",
+            links: [
+              {
+                link_text: "Facebook",
+                link_href: "#"
+              }, {
+                link_text: "Instagram",
+                link_href: "#"
+              }
+            ]
+          }
+        ]
+      } %}
+      {% include "blocks/contacts.tmpl.njk" %}
+    </div>
+  </div>
+
+  <div class="margin-100"></div>
+
+  <div class="container">
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1288.040143814123!2d23.953916667015985!3d49.78455507552734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae6f70a39c481%3A0xe3a523f700fc9a38!2sAvtosalon%20%22Avtokhaus%20L%CA%B9viv%22!5e0!3m2!1sru!2sua!4v1578250947745!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </div>
+
+  <div class="margin-100"></div>
+
+  {# Contact Form #}
+  {% set form = {
+    bgImg: 'assets/images/bgform.jpg',
+    title: 'НЕ ГАЙТЕ ЧАСУ НА САМОСТІЙНІ ПОШУКИ',
+    text: 'Залиште нам свої контакти і ми відразу розкажемо Вам все, що Вас цікавить',
+    input: [
+      {
+        type: 'text',
+        placeholder: "Ім'я"
+      }, {
+        type: 'text',
+        placeholder: "Номер телефону або пошта"
+      }
+    ],
+    textarea_placeholder: "Коментар",
+    btn_text: 'Надіслати'
+  } %}
+  {% include "blocks/contact-form.tmpl.njk" %}
 
   {# Footer #}
   {% include "blocks/footer.tmpl.njk" %}

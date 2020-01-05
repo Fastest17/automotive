@@ -7,7 +7,94 @@
   {# Header #}
   {% include "blocks/header.tmpl.njk" %}
 
-  
+  {# Banner #}
+  {% set banner = {
+    bgImg: 'assets/images/bg2.jpg',
+    title: 'АВТО В НАЯВНОСТІ'
+  } %}
+  {% include "blocks/banner.tmpl.njk" %}
+
+  {# Bread Crumbs #}
+  {% set breadcrumbs = {
+    items: [
+      {
+        link_href: "index.html",
+        link_text: "Головна"
+      },
+      {
+        link_href: "cars.html",
+        link_text: "Авто в наявності"
+      }
+    ]
+  } %}
+  {% include "blocks/bread-crumbs.tmpl.njk" %}
+
+  {# Products #}
+  <section class="products">
+    {% import "blocks/products.tmpl.njk" as product %}
+    {%- call product.main() -%}
+    {%- call product.row() -%}
+    {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €') -%}
+    {%- endcall -%}
+
+    {%- call product.item(imgPath = root + 'assets/images/car1.jpg', title = 'Mercedes-Benz GLE-Class 2018', price = '51 962 €', classHide = 'hide') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car2.jpg', title = 'Audi Q7 3.0 TDI S-LINE 2018', price = '87 898 €', classHide = 'hide') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car3.jpg', title = 'Land Rover Range Rover Sport 2018', price = '78 132 €', classHide = 'hide') -%}
+    {%- endcall -%}
+    {%- call product.item(imgPath = root + 'assets/images/car4.jpg', title = 'Bentley Bentayga Diesel 2018', price = '215 000 €', classHide = 'hide') -%}
+    {%- endcall -%}
+
+    {%- endcall -%}
+
+    {%- call product.see_more() -%}{%- endcall -%}
+
+    {%- endcall -%}
+  </section>
+
+  <div class="margin-100"></div>
+
+  {# Contact Form #}
+  {% set form = {
+    bgImg: 'assets/images/bgform.jpg',
+    title: 'НЕ ГАЙТЕ ЧАСУ НА САМОСТІЙНІ ПОШУКИ',
+    text: 'Залиште нам свої контакти і ми відразу розкажемо Вам все, що Вас цікавить',
+    input: [
+      {
+        type: 'text',
+        placeholder: "Ім'я"
+      }, {
+        type: 'text',
+        placeholder: "Номер телефону або пошта"
+      }
+    ],
+    textarea_placeholder: "Коментар",
+    btn_text: 'Надіслати'
+  } %}
+  {% include "blocks/contact-form.tmpl.njk" %}
 
   {# Footer #}
   {% include "blocks/footer.tmpl.njk" %}

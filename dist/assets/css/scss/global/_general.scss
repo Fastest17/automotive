@@ -7,3 +7,19 @@
         justify-content: center;
     }
 }
+
+.t-center {
+    text-align: center;
+}
+
+.margin-100 {
+    margin-top: 100px;
+
+    @include medium-size-max {
+        margin-top: 80px;
+    }
+
+    @include small-size-max {
+        margin-top: 50px;
+    }
+}

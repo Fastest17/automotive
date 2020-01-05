@@ -2,4 +2,84 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 100px;
+
+    &__content {
+        padding: 95px 95px 30px;
+        margin-top: 100px;
+        margin-bottom: -50px;
+        background-color: rgba($bg-header, .25);
+        width: max-content;
+        max-width: 555px;
+
+        @include small-size-max {
+            margin-top: 100px;
+            max-width: 100%;
+        }
+
+        @include extra-small-size-max{
+            padding: 30px 20px;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        font-family: $f-open-sans;
+        font-weight: bold;
+        color: $c-white;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-family: $f-open-sans;
+        font-weight: bold;
+        color: $c-white;
+        margin-bottom: 50px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-family: $f-open-sans;
+        font-size: 16px;
+        color: $bg-header;
+        padding-left: 40px;
+        background-color: $c-white;
+        height: 44px;
+        margin-bottom: 27px;
+        border: none;
+        border-radius: 22px;
+
+        &::placeholder {
+            color: $bg-header;
+        }
+    }
+
+    textarea {
+        height: 175px;
+        resize: none;
+        padding-top: 16px;
+    }
+
+    button[type="submit"] {
+        background-color: $c-active;
+        font-family: $f-open-sans;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $c-white;
+        padding: 0 36px;
+        border-radius: 22px;
+        height: 44px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: transparent;
+            color: $c-active;
+            border: 1px solid $c-active;
+        }
+    }
 }

@@ -1,0 +1,5 @@
+<section class="breadcrumbs t-center">
+    {% for i in breadcrumbs.items %}
+        <a class="breadcrumbs__link" href="{{i.link_href}}">{{i.link_text}}</a>
+    {% endfor %}
+</section>
